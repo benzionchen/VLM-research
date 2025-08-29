@@ -12,3 +12,10 @@ matplotlib>=3.7.0
 scipy>=1.10.0
 scikit-learn>=1.3.0
 open_clip_torch>=2.24.0
+
+# accelerate – required when a pipeline sets device_map / default device.
+# sentencepiece & protobuf – often needed for LLaMA/TinyLlama tokenizers (pre-emptive install)
+
+accelerate>=0.33.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0
