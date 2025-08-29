@@ -1,37 +1,80 @@
-# Virtual environment
-.venv/
-venv/
 
-# Python cache/compiled files
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
 
-# Jupyter/IPython
-.ipynb_checkpoints/
-
-# Logs and experiment outputs
-*.log
-logs/
-outputs/
-checkpoints/
-runs/
-
-# System files
+# ---------- OS junk ----------
 .DS_Store
 Thumbs.db
 
-# IDE/Editor
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+
+# ---------- Virtual envs ----------
+.venv/
+venv/
+env/
+
+# ---------- IDE / tooling ----------
 .vscode/
 .idea/
 
-# Nested fork clone (don’t track another repo inside this one)
-MILS-fork/
+# ---------- Logs / temp ----------
+*.log
+*.out
+*.tmp
 
-# Ignore datasets
+# ---------- MILS outputs & artifacts ----------
+outputs/
+runs/
+wandb/
+cache/
+.checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# ---------- Datasets (keep code, ignore data) ----------
+# Your data lives at: ~/Desktop/Desktop/projects/data/MILS/{coco,clotho,msrvtt,checkpoints}
+# These patterns also catch any accidental copies inside the repo.
 data/
+**/coco/
+**/clotho/
+**/msrvtt/
+**/checkpoints/
+
+# Common dataset subfolders/files
+**/val2014/
+**/train2014/
+**/test2014/
+**/annotations/
+**/images/
+**/TestVideo/
+**/wav/
+
+# COCO annotation file names
+**/captions_*.json
+**/instances_*.json
+**/person_keypoints_*.json
+
+# Dataset archives
 *.zip
-*.json
+*.7z
+*.tar
+*.tar.gz
+*.xz
+
+# Large media typical for datasets (don’t ignore code configs)
 *.jpg
+*.jpeg
 *.png
+*.gif
+*.mp4
+*.wav
+*.flac
+
+# ---------- Hugging Face local caches (if any in repo) ----------
+.huggingface/
+**/.cache/
