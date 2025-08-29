@@ -28,3 +28,10 @@ Thumbs.db
 
 # Nested fork clone (don’t track another repo inside this one)
 MILS-fork/
+
+# Ignore datasets
+data/
+*.zip
+*.json
+*.jpg
+*.png
