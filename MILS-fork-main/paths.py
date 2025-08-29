@@ -12,7 +12,7 @@ OUTPUT_DIR = f"{DATASET_DIR}/outputs"
 
 # Image captioning
 IMAGEC_COCO_ANNOTATIONS = f"{DATASET_DIR}/coco/annotations/captions_val2014.json"
-IMAGEC_COCO_IMAGES = f"{DATASET_DIR}/coco/val2014"
+IMAGEC_COCO_IMAGES = f"{DATASET_DIR}/coco/val2014_small"
 IMAGEC_COCO_SPLITS = f"{DATASET_DIR}/coco/dataset_coco.json" # downloaded karpathy split
 
 # Video captioning
